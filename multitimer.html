@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Multitimer</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Oleo+Script|Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div id="header-content">
+            <div id="logo" title="Multi-Timer">
+                <span><i class="fa fa-ellipsis-v fa-lg"></i> Multi-<wbr>timer</span>
+            </div>
+            <div id="new-task">
+                <span>New Task: </span>
+                <input type="text" placeholder="Put a task summary here..." class="summary" />
+                <br/>
+                <span>Time: </span>
+                <input type="number" class="duration" value="5"/>
+                <span>Minutes</span>
+                <button>CREATE TASK</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="contents">
+        <section id="running-tasks">
+            <div class="title">running tasks:</div>
+        </section>
+        <section id="completed-tasks">
+            <div class="title">completed tasks:</div>
+        </section>
+
+        <footer>
+            <small>Made by <a href="http://github.com/rsalgado">Roberto Salgado</a>. 2013.</small>
+            <small>
+                Source code and more info <a href="http://github.com/rsalgado/little-experiments/tree/master/multitimer">here</a>.
+            </small>
+        </footer>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="application.js"></script>
+</body>
+</html>

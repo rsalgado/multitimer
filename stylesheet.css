@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+/* Progress/countdown bar styles */
+
+.progress {
+    display: inline-block;
+    border-radius: 0.75em;
+    background-color: rgb(95%, 95%, 95%);
+    border: 1px solid rgb(87%, 87%, 87%);
+    width: 24em;
+    padding: 0.4em;
+    margin: 0.5em;
+}
+    .progress > .bar {
+        height: 1em;
+        border-radius: 0.5em;
+        width: 0%;
+    }
+
+@-webkit-keyframes countdown {
+    0% { 
+        background-color: rgb(50%, 80%, 10%);
+        width: 100%;
+    }
+    50% {
+        background-color: rgb(95%, 95%, 30%);
+    }
+    100% {
+        background-color: rgb(95%, 35%, 35%);
+        width: 0%;
+    }
+}
+@keyframes countdown {
+    0% { 
+        background-color: rgb(50%, 80%, 10%);
+        width: 100%;
+    }
+    50% {
+        background-color: rgb(95%, 95%, 30%);
+    }
+    100% {
+        background-color: rgb(95%, 35%, 35%);
+        width: 0%;
+    }            
+}
+
+
+
+/* Header styles */
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(20%, 60%, 15%, 0.90);
+    border-radius: 0 0em 1em 1em;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(25%, 25%, 25%, 0.5);
+}
+
+/** Logo styles **/    
+#logo {
+    float: left;
+    width: 20%;
+    height: 6em;
+    padding: 1em;
+    cursor: default;
+}
+
+    #logo span {
+        display: block;
+        font-size: 1.75em;
+        font-family: 'Oleo Script', fantasy;
+        font-weight: bold;
+        text-align: center;
+        text-transform: capitalize;
+        color: white;
+    }
+
+/** New task styles **/
+#new-task {
+    float: right;
+    width: 75%;
+    height: 5em;
+    font-size: 1em;
+    color: rgb(90%, 100%, 90%);
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1em;
+}
+
+    #new-task span {
+        font-weight: bold;
+    }
+
+    #new-task .summary, #new-task .duration {
+        font-size: 1em;
+        margin: 0.5em;
+        font-family: 'Open Sans',sans-serif;
+        border: none;
+        border-bottom: 4px solid rgb(60%, 80%, 60%);
+        border-right: 4px solid rgb(60%, 80%, 60%);
+        background-color: rgba(0,0,0,0);
+        color: inherit;    
+    }
+    #new-task .summary {
+        width: 75%;
+    }
+    #new-task .duration {
+        width: 10%;
+        text-align: center;
+    }
+
+    #new-task button {
+        background-color: rgb(20%, 50%, 25%);
+        color: white;
+        font-family: fantasy;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5em;
+        font-size: inherit;
+        margin-left: 4em;
+    }
+        #new-task button:hover {
+            background-color: rgb(10%, 40%, 15%);
+            color: rgb(85%, 95%, 85%);
+        }
+        #new-task button:active {
+            background-color: rgb(10%, 30%, 10%);
+            color: rgb(70%, 85%, 70%);
+        }
+
+
+
+/* Contents styles */
+
+body {
+    background-color: rgb(95%, 95%, 90%);
+}
+
+#contents {
+    position: relative;
+    padding-top: 6em;
+    padding-bottom: 4em;
+    min-height: 100%;
+}
+
+/** Sections styles **/
+section {
+    margin: 1em 0em 1em 0em;
+    padding: 1em;
+    min-height: 13em;    
+    background-color: rgb(92.5%, 92.5%, 92.5%);
+    border: 2px solid rgb(85%, 85%, 90%);
+}
+
+#running-tasks {
+    border-radius: 1em 1em 0 0;
+    border-bottom: 2px dashed rgb(85%, 85%, 90%);
+}
+
+#completed-tasks {
+    border-radius: 0 0 1em 1em;
+    border-top: 2px dashed rgb(85%, 85%, 90%);
+}
+
+.title {
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', fantasy;
+    font-weight: bold;
+    color: rgb(60%, 60%, 70%);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid rgb(70%, 70%, 80%);
+}
+
+/** Tasks styles **/
+.task {
+    margin-top: 1em;
+    border-top: 6px solid rgb(60%, 70%, 90%);
+    background-color: white;
+}
+
+    .task .summary {
+        display: inline-block;
+        padding: 0.4em;
+        margin: 0.5em;
+        vertical-align: bottom;
+        background-color: rgb(100%, 100%, 82%);
+        border-radius: 8px;
+        min-width: 4em;
+        font-family: 'Open Sans', sans-serif;
+        border-bottom: 1px solid #fea;
+    }
+
+    .task .duration {
+        display: inline-block;
+        font-family: 'Roboto Condensed', sans-serif;
+        vertical-align: bottom;
+        margin-bottom: 1em;
+        margin-right: 1em;
+        min-width: 2.5em;
+    }
+
+    /** Buttons styles **/
+    .task .btn {
+        display: inline-block;
+        vertical-align: bottom;
+        margin-bottom: 0.75em;
+        margin-right: 0.5em;
+        padding: 0.25em 0.75em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 2.5em;
+        background-color: rgb(248, 248, 248);
+        box-shadow: 0px 0px 4px #ddd inset;
+        cursor: default;
+    }
+    .task .btn:hover {
+        background: rgb(224, 224, 224);
+        box-shadow: 0px 0px 4px #bbb inset;
+        border-color: #bbb;
+    }
+    .task .btn:active {
+        background: rgb(200, 200, 200);
+        box-shadow: 0px 0px 4px #999 inset;
+        border-color: #aaa;
+    }
+
+
+.paused {
+    border-top: 6px solid rgb(248, 184, 88);
+}
+.completed {
+    border-top: 6px solid rgb(216, 216, 216);
+    animation: completed-task 2s;
+    animation-iteration-count: 5;
+    -webkit-animation: completed-task 2s;
+    -webkit-animation-iteration-count: 5;
+}
+
+@keyframes completed-task {
+    0%      { border-top-color: rgb(216, 216, 216); }
+    50%     { border-top-color: rgb(255, 080, 064); }
+    100%    { border-top-color: rgb(216, 216, 216); }
+}
+@-webkit-keyframes completed-task {
+    0%      { border-top-color: rgb(216, 216, 216); }
+    50%     { border-top-color: rgb(255, 080, 064); }
+    100%    { border-top-color: rgb(216, 216, 216); }
+}
+
+
+
+
+/* Footer styles */
+
+footer {
+    margin-top: 2em;
+    padding: 1em;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #333;
+    color: #888;
+    border-bottom: 8px solid #888;
+    border-radius: 8px 8px 0 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+    footer small {
+        padding: 0em 2em;
+    }
+    footer a {
+        text-decoration: none;
+        color: #6ad;
+    }
+
+
+/* Media queries (experimental)
+   First time using media queries. Desktop-First approach. 
+   Some things aren't very elegant but they do the job. */
+@media all and (max-width: 640px) {
+    #logo, #new-task {
+        font-size: small;
+    }
+
+    #new-task button {
+        margin-left: auto;
+    }
+
+    .progress {
+        width: 20em;
+    }
+
+    .title {
+        font-size: inherit;
+    }
+
+    .task {
+        font-size: 11pt;
+    }
+
+        .task .duration {
+            margin-right: 0;
+        }
+}
+
+@media all and (max-width: 512px) {
+    #logo {
+        display: none;
+    }
+
+    #new-task {
+        height: 6em;
+        width: 90%;
+    }
+
+    section {
+        padding: 0.5em;
+    }
+
+    .task .btn {
+        margin-left: 0.25em;
+        margin-right: 0;
+    }
+
+    .task .progress {
+        width: 16em;
+    }
+
+    footer {
+        padding: 0.75em;
+    }
+        footer small {
+            display: block;
+            font-size: smaller;
+        }
+}

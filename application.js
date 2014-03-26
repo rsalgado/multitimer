@@ -33,12 +33,14 @@ $(document).ready(function () {
     // Event handlers
 
     // New task functionality
-    $("#new-task").on('click', 'button' , function() {
+    $("#new-task").on('submit', function (e) {
+        e.preventDefault();
+
         var defaultTime = 5;
 
         //Get values from inputs
-        var summaryInput = $("#new-task .summary"),
-            durationInput = $("#new-task .duration"),
+        var summaryInput = $("#task-summary"),
+            durationInput = $("#task-duration"),
             summary = summaryInput.val(),
             duration = parseFloat(durationInput.val());
         

@@ -16,15 +16,15 @@
             <div id="logo" title="Multi-Timer">
                 <span><i class="fa fa-ellipsis-v fa-lg"></i> Multi-<wbr>timer</span>
             </div>
-            <div id="new-task">
-                <span>New Task: </span>
-                <input type="text" placeholder="Put a task summary here..." class="summary" />
-                <br/>
-                <span>Time: </span>
-                <input type="number" class="duration" value="5"/>
+            <form id="new-task">
+                <label for="task-summary">New Task: </label>
+                <input type="text" id="task-summary" placeholder="Put a task summary here..." class="summary" required="">
+                <br>
+                <label for="task-duration">Time: </label>
+                <input type="number" id="task-duration" class="duration" value="5" required="">
                 <span>Minutes</span>
-                <button>CREATE TASK</button>
-            </div>
+                <button type="submit">CREATE TASK</button>
+            </form>
         </div>
     </header>
 

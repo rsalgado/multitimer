@@ -1,0 +1,24 @@
+{
+  "name": "multitimer",
+  "version": "0.0.0",
+  "description": "HTML5 Multitimer with CSS3 animations, jQuery and Google Fonts.",
+  "main": "server.js",
+  "dependencies": {
+    "node-static": "^0.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "multitimer",
+    "example"
+  ],
+  "author": "Roberto Salgado",
+  "license": "ISC",
+
+  "engines": {
+    "node": "0.10.x"
+  }
+}

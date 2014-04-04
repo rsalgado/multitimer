@@ -80,4 +80,8 @@ $(document).ready(function () {
             task.removeClass("paused");
         }
     });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 0bed0b5cacac71125e2a2d32d0f6ddc9c371e0d1
